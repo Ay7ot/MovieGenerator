@@ -4,8 +4,9 @@ const setupTextarea = document.getElementById('setup-textarea')
 const setupInputContainer = document.getElementById('setup-input-container')
 const movieBossText = document.getElementById('movie-boss-text')
 
+const apiKeyMain = process.env.OPENAI_API_KEY
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY.toString()
+  apiKey: apiKeyMain
 })
 
 const openai = new OpenAIApi(configuration)
